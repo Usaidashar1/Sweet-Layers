@@ -1,14 +1,12 @@
-import { defineConfig } from 'vite'
-import { TanStackStartVite } from '@tanstack/start/vite'
-import tsconfigPaths from 'vite-tsconfig-paths'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc"; // or "@vitejs/plugin-react"
+import path from "path";
 
 export default defineConfig({
-  plugins: [
-    tsconfigPaths(),
-    TanStackStartVite({
-      server: {
-        preset: 'azure' // Instructs Nitro to build an Azure-compatible server
-      }
-    })
-  ]
-})
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
