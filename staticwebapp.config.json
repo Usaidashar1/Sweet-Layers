@@ -1,14 +1,11 @@
 {
   "navigationFallback": {
-    "rewrite": "/api/functions"
+    "rewrite": "/api/server"
   },
   "routes": [
     {
-      "route": "/api/functions/*",
-      "allowedRoles": ["anonymous"]
+      "route": "/_serverFn/*",
+      "rewrite": "/api/server"
     }
-  ],
-  "platform": {
-    "apiRuntime": "node:22"
-  }
+  ]
 }
