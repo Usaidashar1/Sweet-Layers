@@ -1,11 +1,5 @@
 {
   "navigationFallback": {
-    "rewrite": "/api/server"
-  },
-  "routes": [
-    {
-      "route": "/_serverFn/*",
-      "rewrite": "/api/server"
-    }
-  ]
+    "rewrite": "/index.html"
+  }
 }
